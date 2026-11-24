@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Catálogos{% endblock %}
+
+{% block content %}
+    <h2>Catálogo de opciones</h2>
+
+    <p>Selecciona el catálogo que deseas consultar.</p>
+
+    <table border="1" cellpadding="10" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Catálogo</th>
+                <th>Descripción</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Alumnos</td>
+                <td>Información general de los alumnos.</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Materias</td>
+                <td>Información de las materias que se imparten.</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Grupos</td>
+                <td>Información de los grupos escolares.</td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td><a href="{% url 'listarCarreras' %}">Carreras</a></td>
+                <td>Información de los programas académicos.</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
+

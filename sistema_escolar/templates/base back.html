@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+        Sistema Escolar
+        {% endblock %}
+    </title>
+    
+</head>
+<body>
+
+    <header>
+        <h1>Sistema Escolar</h1>
+
+        <nav>
+            <a href="/">Inicio</a> |
+            <a href="/catalogos/">Catálogos</a> |
+            <a href="/tutorias/">Tutorías</a> |
+            <a href="/usuarios/">Usuarios</a> |
+            <a href="/inscripcion/">Inscripción</a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>MDGP</p>
+    </footer>
+
+</body>
+</html>

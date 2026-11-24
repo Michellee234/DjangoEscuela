@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Nueva Carrera{% endblock %}
+
+{% block content %}
+    <h2>NUEVA CARRERA:</h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-secondary">Guardar</button>
+        <a href="{% url 'listarCarreras' %}" class="btn btn-success">Cancelar</a>
+    </form>
+{% endblock %}
