@@ -1,3 +1,10 @@
-from django.shortcuts import render
+from sistema_escolar.crud import vistas_crud
 
-# Create your views here.
+from .models import Alumno
+
+alumnos = vistas_crud(
+    Alumno, 'alumnos', 'Alumnos',
+    (('matricula', 'Matrícula'), ('nombre', 'Nombre'), ('apellidos', 'Apellidos'),
+     ('correo', 'Correo'), ('carrera', 'Carrera')),
+    campos=('matricula', 'nombre', 'apellidos', 'correo', 'carrera'),
+)
