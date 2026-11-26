@@ -1,0 +1,12 @@
+{% extends 'base.html'%}
+
+{% block content %}
+    <form action="" method="post">
+        {% csrf_token %} 
+        <h3>Estas seguro de eliminar la carrera: {{carrera.nombre}}?</h3>
+        <button type="submit" class="btn btn-danger">Sí, Eliminar</button>
+        <a href="{% url 'listarCarreras' %}" class="btn btn-success">No, Cancelar</a>
+    
+    </form>
+
+{% endblock %}

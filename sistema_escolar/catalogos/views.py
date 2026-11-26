@@ -38,7 +38,7 @@ def editarCarreras(request, pk):
         if form.is_valid():
             form.save()
         return redirect ('listarCarerras')
-    return render (request, 'crearCarrera.html', {'form':form})
+    return render (request, 'catalogos/crearCarrera.html', {'form':form})
 
 def eliminarCarreras(request, pk):
     carrera=Carrera.objects.get(pk=pk)
@@ -46,4 +46,4 @@ def eliminarCarreras(request, pk):
         carrera.delete()
         return redirect ('listarCarreras')
     
-    return render (request, 'eliminarCarreras.html', {'carrera':carrera})
+    return render(request, 'catalogos/eliminarCarrea.html', {'carrera': carrera})
